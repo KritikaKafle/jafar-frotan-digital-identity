@@ -36,7 +36,7 @@ const Hero = () => {
                 Explore My Journey
                 <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="glass hover:bg-card/20">
+              <Button variant="glass" size="lg">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Zeytoon ICT
               </Button>
