@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ExternalLink } from "lucide-react";
-import heroImage from "@/assets/jafar-hero.jpg";
 
 const Hero = () => {
   return (
@@ -11,9 +10,9 @@ const Hero = () => {
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/15 rounded-full blur-3xl animate-pulse delay-1000" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto">
           {/* Content */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-8 animate-fade-in text-center">
             <div className="space-y-4">
               <p className="text-primary font-medium tracking-wide uppercase text-sm">
                 Visionary Entrepreneur & Technology Leader
@@ -26,12 +25,12 @@ const Hero = () => {
               </h2>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Blending innovative technology with creative storytelling to empower communities. 
               Building the future through digital solutions that spark transformation and inspire change.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="btn-hero group">
                 Explore My Journey
                 <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
@@ -43,7 +42,7 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/20">
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/20 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="font-display text-2xl font-bold gradient-text">2017</div>
                 <div className="text-sm text-muted-foreground">Founded</div>
@@ -56,18 +55,6 @@ const Hero = () => {
                 <div className="font-display text-2xl font-bold gradient-text">Global</div>
                 <div className="text-sm text-muted-foreground">Reach</div>
               </div>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="relative animate-scale-in delay-300">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-2xl opacity-30 animate-glow" />
-              <img
-                src={heroImage}
-                alt="Jafar Frotan - CEO & Founder of Zeytoon ICT"
-                className="relative w-full max-w-md mx-auto rounded-3xl shadow-elegant border border-border/20"
-              />
             </div>
           </div>
         </div>
