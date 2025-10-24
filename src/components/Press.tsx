@@ -22,27 +22,37 @@ const Press = () => {
       description: "Comprehensive professional profile detailing career achievements, business ventures, and contributions to the technology sector.",
       date: "2024",
       category: "Biography",
-      link: "#",
+      link: "https://wikitia.com/wiki/Jafar_Frotan",
       featured: true
     },
     {
-      type: "Interview",
-      title: "The Future of Web Hosting",
-      publication: "Tech Industry Weekly",
-      description: "Discussing innovation in web hosting solutions and the vision for democratizing web technology access globally.",
-      date: "March 2024",
-      category: "Technology",
-      link: "#",
+      type: "Article",
+      title: "The Teenage CEO: Jafar Frotan's Rise in the Tech Industry",
+      publication: "365 Business Tips",
+      description: "Exploring Frotan's remarkable journey from founding Zeytoon ICT at age 12 to becoming a CEO, showcasing his blend of youthful ambition and business acumen.",
+      date: "September 2024",
+      category: "Entrepreneurship",
+      link: "https://365businesstips.com/the-teenage-ceo-jafar-frotans-rise-in-the-tech-industry/",
       featured: false
     },
     {
       type: "Feature",
-      title: "Young Entrepreneurs Shaping Digital Landscape",
-      publication: "Innovation Digest",
-      description: "Featured among rising entrepreneurs who are transforming the digital infrastructure and hosting industry.",
-      date: "January 2024",
+      title: "Technology Inside Jafar Frotan's Hekayat Shab",
+      publication: "CEO Weekly",
+      description: "An inside look at the technology and vision behind Hekayat Shab, the innovative storytelling platform co-founded by Jafar Frotan.",
+      date: "2024",
+      category: "Technology",
+      link: "https://ceoweekly.com/technology-inside-jafar-frotans-hekayat-shab/",
+      featured: false
+    },
+    {
+      type: "Article",
+      title: "Jafar Frotan's Blueprint for Empowering Tech Startups",
+      publication: "Phenomena",
+      description: "Insights into Frotan's strategic approach to empowering tech startups and fostering innovation in the digital landscape.",
+      date: "2024",
       category: "Innovation",
-      link: "#",
+      link: "https://www.phenomena.org/jafar-frotans-blueprint-for-empowering-tech-startups/",
       featured: false
     }
   ];
