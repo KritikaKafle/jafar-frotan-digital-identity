@@ -218,8 +218,8 @@ const Contact = () => {
                   {socialLinks.map((social) => (
                     <Button
                       key={social.label}
-                      variant="outline"
-                      className="justify-start glass hover:bg-card/20"
+                      variant="glass"
+                      className="justify-start"
                       asChild
                     >
                       <a href={social.link}>
