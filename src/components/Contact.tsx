@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Globe, Send, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Globe, Send, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -64,12 +64,17 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "#"
+      link: "https://it.linkedin.com/in/jafarfrotan/it"
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      link: "#"
+      icon: Instagram,
+      label: "Instagram",
+      link: "https://www.instagram.com/jafar_frotan/"
+    },
+    {
+      icon: Facebook,
+      label: "Facebook",
+      link: "https://www.facebook.com/JFrotan/"
     },
     {
       icon: Globe,
