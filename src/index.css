@@ -152,8 +152,9 @@
     @apply relative px-8 py-4 rounded-lg font-medium transition-all duration-300;
     @apply bg-gradient-to-r from-primary to-accent text-primary-foreground;
     @apply hover:shadow-glow hover:scale-105;
-    @apply before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-primary before:to-accent before:opacity-0 before:transition-opacity before:duration-300;
+    @apply before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-primary before:to-accent before:opacity-0 before:transition-opacity before:duration-300 before:-z-10;
     @apply hover:before:opacity-100;
+    @apply [&>*]:relative [&>*]:z-10;
   }
 
   /* Premium Card */
