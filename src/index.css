@@ -50,8 +50,8 @@
     --shadow-card: 0 10px 30px -5px hsl(220 25% 5% / 0.3);
 
     /* Typography Scale */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: "Playfair Display", serif;
+    --font-body: "Inter", sans-serif;
 
     /* Animation Curves */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -151,31 +151,23 @@
   .btn-hero {
     @apply relative px-8 py-4 rounded-lg font-medium transition-all duration-300;
     @apply hover:shadow-glow hover:scale-105;
-
     background: var(--gradient-primary);
     color: hsl(var(--primary-foreground));
-    border: 1px solid hsl(var(--primary) / 0.25);
-
-    /* subtle glow layer */
+    border: 1px solid hsl(var(--primary) / 0.25); /* subtle glow layer */
     @apply before:absolute before:inset-0 before:rounded-lg before:opacity-0 before:transition-opacity before:duration-300 before:-z-10;
     background-clip: padding-box;
-  }
-
-  /* Inverted hover effect: swap background and text color */
+  } /* Invert on hover: dark surface + bright text */
   .btn-hero:hover {
-    background: hsl(var(--primary));  /* Change background to primary color */
-    color: hsl(var(--background));    /* Change text color to background color */
+    background: hsl(var(--background));
+    color: hsl(var(--primary));
     border-color: hsl(var(--primary) / 0.55);
   }
-
   .btn-hero::before {
     background: var(--gradient-primary);
   }
-
   .btn-hero:hover::before {
     opacity: 0.65;
   }
-
   .btn-hero > * {
     position: relative;
     z-index: 10;
