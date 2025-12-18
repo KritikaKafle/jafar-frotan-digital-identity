@@ -15,7 +15,10 @@ const Index = () => {
         <Hero />
         <About />
         <ZeytoonICT />
-        <Portfolio />
+        {/* Added id to Portfolio section for scrolling */}
+        <section id="portfolio">
+          <Portfolio />
+        </section>
         <Press />
         <Contact />
       </main>
