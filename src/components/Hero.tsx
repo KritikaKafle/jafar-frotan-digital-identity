@@ -30,7 +30,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-hero group text-primary-foreground">
+              <Button size="lg" className="btn-hero group text-primary-foreground" as="a" href="#portfolio">
                 Explore My Journey
                 <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
               </Button>
