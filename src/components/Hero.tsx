@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ExternalLink } from "lucide-react";
 const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
@@ -24,8 +25,8 @@ const Hero = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Blending innovative technology with creative storytelling to empower communities. 
-              Building the future through digital solutions that spark transformation and inspire change.
+              Blending innovative technology with creative storytelling to empower communities. Building the future
+              through digital solutions that spark transformation and inspire change.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -33,10 +34,12 @@ const Hero = () => {
                 Explore My Journey
                 <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
               </Button>
-              <Button variant="glass" size="lg">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Zeytoon ICT
-              </Button>
+              <a href="https://zeytoonict.com" target="_blank" rel="noopener noreferrer">
+                <Button variant="glass" size="lg">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Zeytoon ICT
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}
@@ -62,6 +65,7 @@ const Hero = () => {
           <ChevronDown className="h-6 w-6 text-muted-foreground" />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default Hero;
