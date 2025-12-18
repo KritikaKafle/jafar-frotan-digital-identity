@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ExternalLink } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
@@ -31,7 +29,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-hero group">
+              <Button size="lg" className="btn-hero group text-primary-foreground">
                 Explore My Journey
                 <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
               </Button>
@@ -64,8 +62,6 @@ const Hero = () => {
           <ChevronDown className="h-6 w-6 text-muted-foreground" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
