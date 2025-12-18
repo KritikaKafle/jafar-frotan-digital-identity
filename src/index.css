@@ -150,11 +150,35 @@
   /* Hero Button Variant */
   .btn-hero {
     @apply relative px-8 py-4 rounded-lg font-medium transition-all duration-300;
-    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground;
     @apply hover:shadow-glow hover:scale-105;
-    @apply before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-primary before:to-accent before:opacity-0 before:transition-opacity before:duration-300 before:-z-10;
-    @apply hover:before:opacity-100;
-    @apply [&>*]:relative [&>*]:z-10;
+
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    border: 1px solid hsl(var(--primary) / 0.25);
+
+    /* subtle glow layer */
+    @apply before:absolute before:inset-0 before:rounded-lg before:opacity-0 before:transition-opacity before:duration-300 before:-z-10;
+    background-clip: padding-box;
+  }
+
+  /* Invert on hover: dark surface + bright text */
+  .btn-hero:hover {
+    background: hsl(var(--background));
+    color: hsl(var(--primary));
+    border-color: hsl(var(--primary) / 0.55);
+  }
+
+  .btn-hero::before {
+    background: var(--gradient-primary);
+  }
+
+  .btn-hero:hover::before {
+    opacity: 0.65;
+  }
+
+  .btn-hero > * {
+    position: relative;
+    z-index: 10;
   }
 
   /* Premium Card */
