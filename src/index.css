@@ -161,10 +161,10 @@
     background-clip: padding-box;
   }
 
-  /* Invert on hover: dark surface + bright text */
+  /* Inverted hover effect: swap background and text color */
   .btn-hero:hover {
-    background: hsl(var(--background));
-    color: hsl(var(--primary));
+    background: hsl(var(--primary));  /* Change background to primary color */
+    color: hsl(var(--background));    /* Change text color to background color */
     border-color: hsl(var(--primary) / 0.55);
   }
 
@@ -180,6 +180,8 @@
     position: relative;
     z-index: 10;
   }
+}
+
 
   /* Premium Card */
   .card-premium {
