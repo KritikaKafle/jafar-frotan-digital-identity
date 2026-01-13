@@ -33,7 +33,7 @@ const Portfolio = () => {
       },
       year: "2018 - Present",
       status: "Active",
-      link: "https://zeytoonict.com",
+      link: "#",
     },
     {
       title: "Tech Innovation Hub",
