@@ -81,11 +81,13 @@ const ZeytoonICT = () => {
                 </div>
 
                 <div className="mt-8">
-                  <Button className="btn-hero group">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Visit Zeytoon ICT
-                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                  </Button>
+                  <a href="https://zeytoonict.com" target="_blank" rel="noopener noreferrer">
+                    <Button className="btn-hero group">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Visit Zeytoon ICT
+                      <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
