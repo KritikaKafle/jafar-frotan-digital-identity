@@ -105,10 +105,12 @@ const Portfolio = () => {
                         {project.year}
                       </div>
                       {project.link !== "#" && (
-                        <Button variant="outline" size="sm" className="glass">
-                          <ExternalLink className="mr-2 h-3 w-3" />
-                          View Project
-                        </Button>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" size="sm" className="glass">
+                            <ExternalLink className="mr-2 h-3 w-3" />
+                            View Project
+                          </Button>
+                        </a>
                       )}
                     </div>
                   </div>
