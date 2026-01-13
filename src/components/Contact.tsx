@@ -12,7 +12,7 @@ const Contact = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -33,9 +33,9 @@ const Contact = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -43,44 +43,44 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@jafarfrotan.com",
-      link: "mailto:hello@jafarfrotan.com"
+      value: "hi@frotan.me",
+      link: "mailto:hi@frotan.me",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Perugia, Umbria, Italy",
-      link: "#"
+      value: "Italy",
+      link: "#",
     },
     {
       icon: Globe,
       label: "Website",
       value: "frotan.me",
-      link: "https://frotan.me"
-    }
+      link: "https://frotan.me",
+    },
   ];
 
   const socialLinks = [
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "https://it.linkedin.com/in/jafarfrotan/it"
+      link: "https://it.linkedin.com/in/jafarfrotan/it",
     },
     {
       icon: Instagram,
       label: "Instagram",
-      link: "https://www.instagram.com/jafar_frotan/"
+      link: "https://www.instagram.com/jafar_frotan/",
     },
     {
       icon: Facebook,
       label: "Facebook",
-      link: "https://www.facebook.com/JFrotan/"
+      link: "https://www.facebook.com/JFrotan/",
     },
     {
       icon: Globe,
       label: "Zeytoon ICT",
-      link: "https://zeytoonict.com"
-    }
+      link: "https://zeytoonict.com",
+    },
   ];
 
   return (
@@ -91,8 +91,8 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Whether you're interested in collaboration, have a business opportunity, or just want to 
-            connect, I'd love to hear from you. Let's create something amazing together.
+            Whether you're interested in collaboration, have a business opportunity, or just want to connect, I'd love
+            to hear from you. Let's create something amazing together.
           </p>
         </div>
 
@@ -100,10 +100,8 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="card-premium animate-slide-up">
             <CardContent className="p-8">
-              <h3 className="font-display text-2xl font-semibold mb-6 gradient-text">
-                Send a Message
-              </h3>
-              
+              <h3 className="font-display text-2xl font-semibold mb-6 gradient-text">Send a Message</h3>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -160,11 +158,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  className="btn-hero w-full group" 
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" className="btn-hero w-full group" disabled={isSubmitting}>
                   {isSubmitting ? (
                     "Sending..."
                   ) : (
@@ -183,10 +177,8 @@ const Contact = () => {
             {/* Contact Details */}
             <Card className="card-premium">
               <CardContent className="p-8">
-                <h3 className="font-display text-2xl font-semibold mb-6 gradient-text">
-                  Get in Touch
-                </h3>
-                
+                <h3 className="font-display text-2xl font-semibold mb-6 gradient-text">Get in Touch</h3>
+
                 <div className="space-y-4">
                   {contactInfo.map((contact) => (
                     <div key={contact.label} className="flex items-center gap-4">
@@ -196,10 +188,7 @@ const Contact = () => {
                       <div>
                         <div className="font-medium text-foreground">{contact.label}</div>
                         {contact.link !== "#" ? (
-                          <a 
-                            href={contact.link}
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
+                          <a href={contact.link} className="text-muted-foreground hover:text-primary transition-colors">
                             {contact.value}
                           </a>
                         ) : (
@@ -215,18 +204,11 @@ const Contact = () => {
             {/* Social Links */}
             <Card className="card-premium">
               <CardContent className="p-8">
-                <h3 className="font-display text-xl font-semibold mb-6 gradient-text">
-                  Connect Online
-                </h3>
-                
+                <h3 className="font-display text-xl font-semibold mb-6 gradient-text">Connect Online</h3>
+
                 <div className="grid gap-3">
                   {socialLinks.map((social) => (
-                    <Button
-                      key={social.label}
-                      variant="glass"
-                      className="justify-start"
-                      asChild
-                    >
+                    <Button key={social.label} variant="glass" className="justify-start" asChild>
                       <a href={social.link}>
                         <social.icon className="mr-3 h-4 w-4" />
                         {social.label}
@@ -240,12 +222,10 @@ const Contact = () => {
             {/* Quick Info */}
             <Card className="card-premium">
               <CardContent className="p-8 text-center">
-                <h4 className="font-display text-lg font-semibold mb-3 gradient-text">
-                  Response Time
-                </h4>
+                <h4 className="font-display text-lg font-semibold mb-3 gradient-text">Response Time</h4>
                 <p className="text-muted-foreground">
-                  I typically respond to messages within <strong className="text-foreground">24 hours</strong>. 
-                  For urgent matters, please mention it in your subject line.
+                  I typically respond to messages within <strong className="text-foreground">24 hours</strong>. For
+                  urgent matters, please mention it in your subject line.
                 </p>
               </CardContent>
             </Card>
