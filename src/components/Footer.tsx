@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Globe className="h-4 w-4" />
-                <span>Perugia, Umbria, Italy</span>
+                <span>Italy</span>
               </div>
               <a
                 href="mailto:hello@jafarfrotan.com"
