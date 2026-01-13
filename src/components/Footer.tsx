@@ -78,10 +78,10 @@ const Footer = () => {
                 <span>Italy</span>
               </div>
               <a
-                href="mailto:hello@jafarfrotan.com"
+                href="mailto:hi@frotan.me"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                hello@jafarfrotan.com
+                hi@frotan.me
               </a>
             </div>
           </div>
