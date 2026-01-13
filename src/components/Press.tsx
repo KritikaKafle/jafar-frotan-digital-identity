@@ -6,16 +6,6 @@ import { ExternalLink, Calendar, FileText, Award } from "lucide-react";
 const Press = () => {
   const pressItems = [
     {
-      type: "Article",
-      title: "Building a Tech Empire Before 20",
-      publication: "Awe.some",
-      description: "An in-depth look at Jafar Frotan's entrepreneurial journey and how he built a successful technology company at a young age.",
-      date: "September 2024",
-      category: "Entrepreneurship",
-      link: "https://awe.sm/2024/09/01/jafar-frotan-building-a-tech-empire-before-20/",
-      featured: true
-    },
-    {
       type: "Profile",
       title: "Jafar Frotan - Entrepreneur Profile",
       publication: "Wikitia",
@@ -24,6 +14,26 @@ const Press = () => {
       category: "Biography",
       link: "https://wikitia.com/wiki/Jafar_Frotan",
       featured: true
+    },
+    {
+      type: "Profile",
+      title: "Jafar Frotan",
+      publication: "Grokipedia",
+      description: "Encyclopedia entry covering Jafar Frotan's background, entrepreneurial ventures, and impact on the technology industry.",
+      date: "2024",
+      category: "Biography",
+      link: "https://grokipedia.com/page/Jafar_Frotan",
+      featured: true
+    },
+    {
+      type: "Article",
+      title: "Building a Tech Empire Before 20",
+      publication: "Awe.some",
+      description: "An in-depth look at Jafar Frotan's entrepreneurial journey and how he built a successful technology company at a young age.",
+      date: "September 2024",
+      category: "Entrepreneurship",
+      link: "https://awe.sm/2024/09/01/jafar-frotan-building-a-tech-empire-before-20/",
+      featured: false
     },
     {
       type: "Article",
