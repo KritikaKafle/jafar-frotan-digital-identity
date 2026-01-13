@@ -8,45 +8,48 @@ const Portfolio = () => {
     {
       title: "Zeytoon ICT",
       category: "Web Hosting Platform",
-      description: "Leading web hosting solutions company serving millions of users worldwide with comprehensive digital tools and infrastructure.",
+      description:
+        "Leading web hosting solutions company serving millions of users worldwide with comprehensive digital tools and infrastructure.",
       technologies: ["Web Hosting", "Cloud Infrastructure", "Global CDN", "24/7 Support"],
       metrics: {
         users: "Millions",
         uptime: "99.9%",
-        countries: "Global"
+        countries: "Global",
       },
       year: "2017 - Present",
       status: "Active",
-      link: "https://zeytoonict.com"
+      link: "https://zeytoonict.com",
     },
     {
       title: "Hekayat Shab",
       category: "Digital Storytelling",
-      description: "Creative storytelling platform that combines narrative excellence with digital innovation to share captivating stories that inspire change.",
+      description:
+        "Creative storytelling platform that combines narrative excellence with digital innovation to share captivating stories that inspire change.",
       technologies: ["Content Creation", "Digital Media", "Community Building", "Creative Writing"],
       metrics: {
         stories: "Thousands",
         engagement: "High",
-        impact: "Global"
+        impact: "Global",
       },
       year: "2018 - Present",
       status: "Active",
-      link: "#"
+      link: "https://zeytoonict.com",
     },
     {
       title: "Tech Innovation Hub",
       category: "Entrepreneurship",
-      description: "Incubating and mentoring next-generation entrepreneurs in technology, providing resources and guidance for startup success.",
+      description:
+        "Incubating and mentoring next-generation entrepreneurs in technology, providing resources and guidance for startup success.",
       technologies: ["Mentorship", "Startup Incubation", "Technology Consulting", "Business Strategy"],
       metrics: {
         startups: "20+",
         success: "85%",
-        funding: "$2M+"
+        funding: "$2M+",
       },
       year: "2019 - Present",
       status: "Ongoing",
-      link: "#"
-    }
+      link: "#",
+    },
   ];
 
   return (
@@ -57,33 +60,31 @@ const Portfolio = () => {
             <span className="gradient-text">Portfolio</span> & Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A showcase of innovative ventures and initiatives that blend technology with impact, 
-            creating meaningful solutions for global communities.
+            A showcase of innovative ventures and initiatives that blend technology with impact, creating meaningful
+            solutions for global communities.
           </p>
         </div>
 
         <div className="grid gap-8 max-w-4xl mx-auto">
           {projects.map((project, index) => (
-            <Card key={project.title} className="card-premium animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card
+              key={project.title}
+              className="card-premium animate-slide-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-3 gap-8">
                   {/* Project Info */}
                   <div className="md:col-span-2 space-y-4">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <h3 className="font-display text-2xl font-bold gradient-text mb-2">
-                          {project.title}
-                        </h3>
+                        <h3 className="font-display text-2xl font-bold gradient-text mb-2">{project.title}</h3>
                         <p className="text-primary font-medium">{project.category}</p>
                       </div>
-                      <Badge variant={project.status === 'Active' ? 'default' : 'secondary'}>
-                        {project.status}
-                      </Badge>
+                      <Badge variant={project.status === "Active" ? "default" : "secondary"}>{project.status}</Badge>
                     </div>
 
-                    <p className="text-muted-foreground leading-relaxed">
-                      {project.description}
-                    </p>
+                    <p className="text-muted-foreground leading-relaxed">{project.description}</p>
 
                     {/* Technologies */}
                     <div>
@@ -119,15 +120,15 @@ const Portfolio = () => {
                       {Object.entries(project.metrics).map(([key, value]) => (
                         <div key={key} className="flex items-center gap-3">
                           <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-                            {key === 'users' && <Users className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'uptime' && <Globe className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'countries' && <Globe className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'stories' && <Users className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'engagement' && <Users className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'impact' && <Globe className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'startups' && <Users className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'success' && <Globe className="h-4 w-4 text-primary-foreground" />}
-                            {key === 'funding' && <Globe className="h-4 w-4 text-primary-foreground" />}
+                            {key === "users" && <Users className="h-4 w-4 text-primary-foreground" />}
+                            {key === "uptime" && <Globe className="h-4 w-4 text-primary-foreground" />}
+                            {key === "countries" && <Globe className="h-4 w-4 text-primary-foreground" />}
+                            {key === "stories" && <Users className="h-4 w-4 text-primary-foreground" />}
+                            {key === "engagement" && <Users className="h-4 w-4 text-primary-foreground" />}
+                            {key === "impact" && <Globe className="h-4 w-4 text-primary-foreground" />}
+                            {key === "startups" && <Users className="h-4 w-4 text-primary-foreground" />}
+                            {key === "success" && <Globe className="h-4 w-4 text-primary-foreground" />}
+                            {key === "funding" && <Globe className="h-4 w-4 text-primary-foreground" />}
                           </div>
                           <div>
                             <div className="font-semibold text-foreground">{value}</div>
@@ -147,16 +148,14 @@ const Portfolio = () => {
         <div className="text-center mt-16 animate-fade-in">
           <Card className="card-premium max-w-2xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="font-display text-2xl font-semibold mb-4 gradient-text">
-                Ready to Collaborate?
-              </h3>
+              <h3 className="font-display text-2xl font-semibold mb-4 gradient-text">Ready to Collaborate?</h3>
               <p className="text-muted-foreground mb-6">
-                I'm always open to discussing new opportunities, partnerships, and innovative projects 
-                that can make a meaningful impact.
+                I'm always open to discussing new opportunities, partnerships, and innovative projects that can make a
+                meaningful impact.
               </p>
-              <Button className="btn-hero">
-                Let's Connect
-              </Button>
+              <a href="mailto:hi@frotan.me?subject=Let's%20Connect">
+                <Button className="btn-hero">Let's Connect</Button>
+              </a>
             </CardContent>
           </Card>
         </div>
