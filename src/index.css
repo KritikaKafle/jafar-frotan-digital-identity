@@ -156,10 +156,9 @@
     border: 1px solid hsl(var(--primary) / 0.25); /* subtle glow layer */
     @apply before:absolute before:inset-0 before:rounded-lg before:opacity-0 before:transition-opacity before:duration-300 before:-z-10;
     background-clip: padding-box;
-  } /* Invert on hover: dark surface + bright text */
+  }
+  /* Keep text color consistent on hover - only background changes */
   .btn-hero:hover {
-    background: hsl(var(--background));
-    color: hsl(var(--primary));
     border-color: hsl(var(--primary) / 0.55);
   }
   .btn-hero::before {
