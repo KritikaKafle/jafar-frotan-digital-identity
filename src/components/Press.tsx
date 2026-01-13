@@ -139,10 +139,12 @@ const Press = () => {
                         {item.category}
                       </Badge>
                       {item.link !== "#" && (
-                        <Button variant="outline" size="sm" className="glass">
-                          <ExternalLink className="mr-2 h-3 w-3" />
-                          Read Article
-                        </Button>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" size="sm" className="glass">
+                            <ExternalLink className="mr-2 h-3 w-3" />
+                            Read Article
+                          </Button>
+                        </a>
                       )}
                     </div>
                   </CardContent>
