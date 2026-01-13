@@ -185,9 +185,11 @@ const Press = () => {
                       <div className="text-right flex-shrink-0">
                         <div className="text-sm text-muted-foreground mb-2">{item.date}</div>
                         {item.link !== "#" && (
-                          <Button variant="ghost" size="sm">
-                            <ExternalLink className="h-3 w-3" />
-                          </Button>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer">
+                            <Button variant="ghost" size="sm">
+                              <ExternalLink className="h-3 w-3" />
+                            </Button>
+                          </a>
                         )}
                       </div>
                     </div>
