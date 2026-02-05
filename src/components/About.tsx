@@ -111,7 +111,7 @@ const About = () => {
 
           {/* Values */}
           <div className="grid gap-6 animate-slide-up delay-200">
-            <h3 className="font-display text-2xl font-semibold gradient-text">
+            <h3 className="font-display text-xl md:text-2xl font-semibold gradient-text text-center md:text-left">
               Core Values
             </h3>
             {values.map((value, index) => (
