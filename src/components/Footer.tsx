@@ -13,7 +13,6 @@ const Footer = () => {
   ];
 
   const externalLinks = [
-    { href: "https://frotan.me", label: "Personal Site" },
     { href: "https://zeytoonict.com", label: "Zeytoon ICT" },
     { href: "#", label: "Hekayat Shab" }
   ];
