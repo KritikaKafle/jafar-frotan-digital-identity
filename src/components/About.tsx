@@ -94,11 +94,11 @@ const About = () => {
 
             {/* Skills */}
             <Card className="card-premium">
-              <CardContent className="p-8">
-                <h3 className="font-display text-2xl font-semibold mb-6 gradient-text">
+              <CardContent className="p-8 text-center md:text-left">
+                <h3 className="font-display text-xl md:text-2xl font-semibold mb-6 gradient-text">
                   Expertise
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                   {skills.map((skill) => (
                     <Badge key={skill} variant="secondary" className="px-3 py-1">
                       {skill}
