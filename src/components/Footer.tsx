@@ -27,10 +27,10 @@ const Footer = () => {
   }];
   return <footer className="bg-card/50 border-t border-border/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 justify-center md:justify-start">
               <span className="font-display text-2xl font-bold gradient-text">
                 Jafar Frotan
               </span>
@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Connect</h4>
             <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2 text-muted-foreground">
+              <div className="flex items-center gap-2 text-muted-foreground justify-center md:justify-start">
                 <Globe className="h-4 w-4" />
                 <span>Italy</span>
               </div>
