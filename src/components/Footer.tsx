@@ -91,9 +91,15 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-1">
-            <span>© {currentYear} Jafar Frotan. Made with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
-            <span>for innovation.</span>
+            <span>© {currentYear} Powered By</span>
+            <a 
+              href="https://zeytoon.it" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-[#808000] transition-colors"
+            >
+              Zeytoon
+            </a>
           </div>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-primary transition-colors">
