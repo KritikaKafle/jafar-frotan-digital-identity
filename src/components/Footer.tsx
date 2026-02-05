@@ -22,7 +22,7 @@ const Footer = () => {
     href: "https://zeytoonict.com",
     label: "Zeytoon ICT"
   }, {
-    href: "#",
+    href: "https://hekay.at",
     label: "Hekayat Shab"
   }];
   return <footer className="bg-card/50 border-t border-border/20">
