@@ -109,7 +109,7 @@ const Press = () => {
 
         {/* Featured Articles */}
         <div className="mb-16">
-          <h3 className="font-display text-2xl font-semibold mb-8 gradient-text">Featured Coverage</h3>
+          <h3 className="font-display text-xl md:text-2xl font-semibold mb-8 gradient-text text-center md:text-left">Featured Coverage</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {pressItems
               .filter((item) => item.featured)
@@ -119,20 +119,20 @@ const Press = () => {
                   className="card-premium animate-slide-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <CardContent className="p-8">
-                    <div className="flex items-start justify-between mb-4">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                       <Badge variant={item.type === "Article" ? "default" : "secondary"}>{item.type}</Badge>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Calendar className="h-4 w-4" />
+                      <div className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground">
+                        <Calendar className="h-3 w-3 md:h-4 md:w-4" />
                         {item.date}
                       </div>
                     </div>
 
-                    <h4 className="font-display text-xl font-semibold mb-2 text-foreground">{item.title}</h4>
+                    <h4 className="font-display text-lg md:text-xl font-semibold mb-2 text-foreground">{item.title}</h4>
 
-                    <p className="text-primary font-medium mb-3">{item.publication}</p>
+                    <p className="text-primary font-medium text-sm md:text-base mb-3">{item.publication}</p>
 
-                    <p className="text-muted-foreground leading-relaxed mb-6">{item.description}</p>
+                    <p className="text-muted-foreground leading-relaxed text-sm md:text-base mb-6">{item.description}</p>
 
                     <div className="flex items-center justify-between">
                       <Badge variant="outline" className="text-xs">
@@ -155,7 +155,7 @@ const Press = () => {
 
         {/* All Press Coverage */}
         <div className="mb-16">
-          <h3 className="font-display text-2xl font-semibold mb-8 gradient-text">Media Coverage</h3>
+          <h3 className="font-display text-xl md:text-2xl font-semibold mb-8 gradient-text text-center md:text-left">Media Coverage</h3>
           <div className="space-y-4">
             {pressItems
               .filter((item) => !item.featured)
@@ -165,28 +165,28 @@ const Press = () => {
                   className="card-premium animate-slide-up"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4 flex-1">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                          <FileText className="h-5 w-5 text-primary-foreground" />
+                  <CardContent className="p-4 md:p-6">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                      <div className="flex items-start gap-3 md:gap-4 flex-1 min-w-0">
+                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                          <FileText className="h-4 w-4 md:h-5 md:w-5 text-primary-foreground" />
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-2">
-                            <h4 className="font-semibold text-foreground">{item.title}</h4>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-2 mb-2">
+                            <h4 className="font-semibold text-foreground text-sm md:text-base">{item.title}</h4>
                             <Badge variant="outline" className="text-xs">
                               {item.type}
                             </Badge>
                           </div>
-                          <p className="text-primary font-medium text-sm mb-2">{item.publication}</p>
-                          <p className="text-muted-foreground text-sm">{item.description}</p>
+                          <p className="text-primary font-medium text-xs md:text-sm mb-2">{item.publication}</p>
+                          <p className="text-muted-foreground text-xs md:text-sm line-clamp-2 md:line-clamp-none">{item.description}</p>
                         </div>
                       </div>
-                      <div className="text-right flex-shrink-0">
-                        <div className="text-sm text-muted-foreground mb-2">{item.date}</div>
+                      <div className="flex md:flex-col items-center md:items-end justify-between md:justify-start gap-2 md:text-right flex-shrink-0">
+                        <div className="text-xs md:text-sm text-muted-foreground">{item.date}</div>
                         {item.link !== "#" && (
                           <a href={item.link} target="_blank" rel="noopener noreferrer">
-                            <Button variant="ghost" size="sm">
+                            <Button variant="ghost" size="sm" className="h-8 px-2">
                               <ExternalLink className="h-3 w-3" />
                             </Button>
                           </a>
@@ -201,7 +201,7 @@ const Press = () => {
 
         {/* Awards & Recognition */}
         <div>
-          <h3 className="font-display text-2xl font-semibold mb-8 gradient-text">Awards & Recognition</h3>
+          <h3 className="font-display text-xl md:text-2xl font-semibold mb-8 gradient-text text-center md:text-left">Awards & Recognition</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {recognitions.map((recognition, index) => (
               <Card
