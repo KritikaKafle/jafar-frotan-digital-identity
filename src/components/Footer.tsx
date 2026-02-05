@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Projects</h4>
             <nav className="space-y-2">
-              {externalLinks.map(link => <a key={link.href} href={link.href} className={`block text-muted-foreground transition-colors text-sm ${link.label === 'Zeytoon ICT' ? 'hover:text-[#808000]' : link.label === 'Hekayat Shab' ? 'hover:text-[#FF8C00]' : 'hover:text-primary'}`} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+              {externalLinks.map(link => <a key={link.href} href={link.href} className={`block text-muted-foreground transition-colors text-sm ${link.label === 'Zeytoon ICT' ? 'hover:text-[#808000]' : link.label === 'Hekayat Shab' ? 'hover:text-[#f6c916]' : 'hover:text-primary'}`} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                   {link.label}
                 </a>)}
             </nav>
