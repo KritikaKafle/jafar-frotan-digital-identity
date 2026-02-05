@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lightbulb, Rocket, Users, Target } from "lucide-react";
+import { Lightbulb, Rocket, Users, Target, ChevronDown, ChevronUp } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const About = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isMobile = useIsMobile();
   const values = [
     {
       icon: Lightbulb,
@@ -50,25 +54,41 @@ const About = () => {
           <div className="space-y-6 animate-slide-up">
             <Card className="card-premium">
               <CardContent className="p-8">
-                <h3 className="font-display text-2xl font-semibold mb-4 gradient-text">
+                <h3 className="font-display text-xl md:text-2xl font-semibold mb-4 gradient-text">
                   My Journey
                 </h3>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
+                <div className={`text-muted-foreground leading-relaxed text-sm md:text-base ${isMobile && !isExpanded ? 'line-clamp-3' : ''}`}>
+                  <p className={isMobile && !isExpanded ? 'inline' : 'mb-4'}>
                     My entrepreneurial journey began with a simple idea and an unwavering drive to make a difference. 
                     From sharing innovative ideas on social media to launching full-fledged ventures, I discovered 
                     a community eager for innovation and inspiration.
                   </p>
-                  <p>
-                    As the founder of <strong className="text-foreground">Zeytoon ICT</strong> and 
-                    <strong className="text-foreground"> Hekayat Shab</strong>, I've dedicated myself to 
-                    delivering digital solutions and sharing captivating narratives that spark meaningful change.
-                  </p>
-                  <p>
-                    My mission is to revolutionize how technology meets storytelling, empowering people with 
-                    tools, ideas, and inspiration so they can overcome challenges and realize their full potential.
-                  </p>
+                  {(!isMobile || isExpanded) && (
+                    <>
+                      <p className="mb-4">
+                        As the founder of <strong className="text-foreground">Zeytoon ICT</strong> and 
+                        <strong className="text-foreground"> Hekayat Shab</strong>, I've dedicated myself to 
+                        delivering digital solutions and sharing captivating narratives that spark meaningful change.
+                      </p>
+                      <p>
+                        My mission is to revolutionize how technology meets storytelling, empowering people with 
+                        tools, ideas, and inspiration so they can overcome challenges and realize their full potential.
+                      </p>
+                    </>
+                  )}
                 </div>
+                {isMobile && (
+                  <button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="mt-3 flex items-center gap-1 text-primary text-sm font-medium hover:underline"
+                  >
+                    {isExpanded ? (
+                      <>Read less <ChevronUp className="h-4 w-4" /></>
+                    ) : (
+                      <>Read more <ChevronDown className="h-4 w-4" /></>
+                    )}
+                  </button>
+                )}
               </CardContent>
             </Card>
 
