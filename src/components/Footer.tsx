@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Quick Links</h4>
             <nav className="space-y-2">
-              {quickLinks.map(link => <a key={link.href} href={link.href} className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              {quickLinks.map(link => <a key={link.href} href={link.href} className={`block text-muted-foreground transition-colors text-sm ${link.label === 'Zeytoon ICT' ? 'hover:text-[#808000]' : 'hover:text-primary'}`}>
                   {link.label}
                 </a>)}
             </nav>
