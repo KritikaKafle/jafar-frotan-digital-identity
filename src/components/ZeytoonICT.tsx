@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Globe, Users, Shield, Zap } from "lucide-react";
+import { ExternalLink, Globe, Users, Shield, Zap, ChevronDown, ChevronUp } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ZeytoonICT = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isMobile = useIsMobile();
+
   const achievements = [
     {
       icon: Users,
@@ -56,29 +61,46 @@ const ZeytoonICT = () => {
           {/* Company Overview */}
           <div className="space-y-8 animate-slide-up">
             <Card className="card-premium">
-              <CardContent className="p-8">
+              <CardContent className="p-8 text-center md:text-left">
                 <div className="mb-6">
-                  <h3 className="font-display text-3xl font-bold gradient-text mb-2">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold gradient-text mb-2">
                     Host Your Dreams
                   </h3>
-                  <p className="text-muted-foreground italic">Our Mission & Vision</p>
+                  <p className="text-muted-foreground italic text-sm md:text-base">Our Mission & Vision</p>
                 </div>
                 
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
+                <div className={`text-muted-foreground leading-relaxed text-sm md:text-base ${isMobile && !isExpanded ? 'line-clamp-3' : ''}`}>
+                  <p className={isMobile && !isExpanded ? 'inline' : 'mb-4'}>
                     Since our founding in 2017, Zeytoon has continually innovated new ways to deliver 
                     on our mission: <strong className="text-foreground">to empower people to fully harness the web.</strong>
                   </p>
-                  <p>
-                    We provide comprehensive web hosting packages and tools to millions of users 
-                    throughout the world, ensuring that anyone—novice or professional—can get on 
-                    the web and thrive.
-                  </p>
-                  <p>
-                    Our commitment to innovation, reliability, and customer success has made us 
-                    a trusted partner for businesses and individuals worldwide.
-                  </p>
+                  {(!isMobile || isExpanded) && (
+                    <>
+                      <p className="mb-4">
+                        We provide comprehensive web hosting packages and tools to millions of users 
+                        throughout the world, ensuring that anyone—novice or professional—can get on 
+                        the web and thrive.
+                      </p>
+                      <p>
+                        Our commitment to innovation, reliability, and customer success has made us 
+                        a trusted partner for businesses and individuals worldwide.
+                      </p>
+                    </>
+                  )}
                 </div>
+
+                {isMobile && (
+                  <button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="mt-3 inline-flex items-center gap-1 text-primary text-sm font-medium hover:underline"
+                  >
+                    {isExpanded ? (
+                      <>Read less <ChevronUp className="h-4 w-4" /></>
+                    ) : (
+                      <>Read more <ChevronDown className="h-4 w-4" /></>
+                    )}
+                  </button>
+                )}
 
                 <div className="mt-8">
                   <a href="https://zeytoonict.com" target="_blank" rel="noopener noreferrer">
@@ -94,13 +116,13 @@ const ZeytoonICT = () => {
 
             {/* Services */}
             <Card className="card-premium">
-              <CardContent className="p-8">
+              <CardContent className="p-8 text-center md:text-left">
                 <h4 className="font-display text-xl font-semibold mb-4 gradient-text">
                   Our Services
                 </h4>
                 <div className="grid grid-cols-2 gap-3">
                   {features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-2">
+                    <div key={feature} className="flex items-center gap-2 justify-center md:justify-start">
                       <div className="w-2 h-2 bg-gradient-primary rounded-full" />
                       <span className="text-sm text-muted-foreground">{feature}</span>
                     </div>
