@@ -53,7 +53,7 @@ const About = () => {
           {/* Story */}
           <div className="space-y-6 animate-slide-up">
             <Card className="card-premium">
-              <CardContent className="p-8">
+              <CardContent className="p-8 text-center md:text-left">
                 <h3 className="font-display text-xl md:text-2xl font-semibold mb-4 gradient-text">
                   My Journey
                 </h3>
@@ -80,7 +80,7 @@ const About = () => {
                 {isMobile && (
                   <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="mt-3 flex items-center gap-1 text-primary text-sm font-medium hover:underline"
+                    className="mt-3 inline-flex items-center gap-1 text-primary text-sm font-medium hover:underline"
                   >
                     {isExpanded ? (
                       <>Read less <ChevronUp className="h-4 w-4" /></>
