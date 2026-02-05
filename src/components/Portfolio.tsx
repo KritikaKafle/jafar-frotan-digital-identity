@@ -155,7 +155,7 @@ const Portfolio = () => {
                 I'm always open to discussing new opportunities, partnerships, and innovative projects that can make a
                 meaningful impact.
               </p>
-              <a href="mailto:hi@frotan.me?subject=Let's%20Connect">
+              <a href="mailto:hi@frotan.me">
                 <Button className="btn-hero">Let's Connect</Button>
               </a>
             </CardContent>
