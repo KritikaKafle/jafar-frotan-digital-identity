@@ -133,7 +133,7 @@ const ZeytoonICT = () => {
           </div>
 
           {/* Achievements Grid */}
-          <div className="grid grid-cols-2 gap-6 animate-slide-up delay-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up delay-200">
             {achievements.map((achievement, index) => (
               <Card key={achievement.label} className="card-premium text-center group hover:scale-105 transition-all duration-300">
                 <CardContent className="p-6">
